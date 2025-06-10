@@ -1,8 +1,7 @@
-interface RenderProps {
-  link: string;
-  content: string;
-  color?: string;
+interface NavKey {
+  label: string;
+  url: string;
   icon?: string;
 }
 
-export type { RenderProps };
+export type { NavKey };
