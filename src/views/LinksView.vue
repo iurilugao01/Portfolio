@@ -17,9 +17,14 @@ import BaseLink from "../components/BaseLink.vue";
         </h1>
 
         <div class="flex flex-col gap-4 w-full max-w-sm animate-slide-up">
-          <BaseLink to="/events" color="red">🎉 Eventos</BaseLink>
-          <BaseLink to="/media" color="emerald">📸 Mídia</BaseLink>
-          <BaseLink to="/news" color="indigo">📰 Novidades</BaseLink>
+          <BaseLink to="#" color="indigo">
+            <i class="bi bi-linkedin"></i>
+            Linkedin
+          </BaseLink>
+          <BaseLink to="#" color="black">
+            <i class="bi bi-github"></i>
+            Github
+          </BaseLink>
         </div>
       </div>
     </div>

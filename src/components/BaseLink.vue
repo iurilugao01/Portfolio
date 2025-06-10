@@ -16,6 +16,8 @@ const colorClass = computed(() => {
       return "bg-emerald-500 hover:bg-emerald-600";
     case "red":
       return "bg-red-500 hover:bg-red-600";
+    case "black":
+      return "bg-black hover:bg-gray-9  00";
     case "indigo":
     default:
       return "bg-indigo-600 hover:bg-indigo-700";
