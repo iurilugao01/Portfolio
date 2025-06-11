@@ -10,6 +10,10 @@ const routes = [
     path: "/links",
     component: () => import("../views/LinksView.vue"),
   },
+  {
+    path: "/about",
+    component: () => import("../views/curriculum.vue"),
+  },
 ];
 
 declare const router: Router;

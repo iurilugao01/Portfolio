@@ -15,7 +15,7 @@ const navs = [
   },
   {
     label: "Curriculo",
-    url: "#",
+    url: "/about",
     icon: "bi-file-earmark-text",
   },
 ];
