@@ -27,7 +27,7 @@ onMounted(() => {
 <template>
   <div class="relative inline-block">
     <i
-      class="bi bi-globe2 cursor-pointer text-xl p-2 rounded-full border dark:text-white border-gray-300 dark:border-gray-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow hover:scale-110"
+      class="bi bi-globe2 text-xl p-2 rounded-full border dark:text-white border-gray-300 dark:border-gray-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow hover:scale-110"
       @click="isOpen = !isOpen"
       title="Trocar idioma"
     ></i>
@@ -35,7 +35,7 @@ onMounted(() => {
     <transition name="fade-slide">
       <div
         v-show="isOpen"
-        class="absolute top-full right-2 mt-2 w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-50 overflow-hidden animate-pop backdrop-blur-sm"
+        class="absolute top-full right-2.5 mt-2 w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-50 overflow-hidden animate-pop backdrop-blur-sm"
       >
         <div class="flex flex-col p-3">
           <div
@@ -46,7 +46,7 @@ onMounted(() => {
               isOpen = false;
             "
             :class="[
-              'flex items-center gap-3 px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200 cursor-pointer',
+              'flex items-center gap-3 px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200 ',
               locale.value === lang.code
                 ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'
                 : 'text-gray-800 dark:text-gray-100 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white',

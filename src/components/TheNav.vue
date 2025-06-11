@@ -12,7 +12,7 @@ const isOpen = ref(false);
 <template>
   <div class="relative inline-block z-[9999]">
     <i
-      class="bi bi-search cursor-pointer text-xl p-2 rounded-full border dark:text-white border-gray-300 dark:border-gray-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow hover:scale-110"
+      class="bi bi-search text-xl p-2 rounded-full border dark:text-white border-gray-300 dark:border-gray-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow hover:scale-110"
       @click="isOpen = !isOpen"
       title="Pesquisar navegação"
     ></i>
@@ -20,11 +20,12 @@ const isOpen = ref(false);
     <transition name="fade-slide">
       <div
         v-show="isOpen"
-        class="absolute top-full left-0 mt-2 z-[9999] w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl overflow-hidden animate-pop backdrop-blur-sm"
+        class="absolute top-full left-0 mt-2.5 z-[9999] w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl overflow-hidden animate-pop backdrop-blur-sm"
       >
         <nav v-if="navs?.length" class="flex flex-col p-3">
           <RouterLink
             v-for="(route, index) in navs"
+            class="cursor-default"
             :key="index"
             :to="route.url"
             @click="isOpen = false"

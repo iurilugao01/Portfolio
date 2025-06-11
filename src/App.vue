@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
 import TheTopBar from "./components/TheTopBar.vue";
 
 const navs = [
@@ -23,7 +22,7 @@ const navs = [
 
 <template>
   <TheTopBar header="Iuri Lugão" :navs="navs" />
-  <RouterView />
+  <RouterView class="relative z-10" />
 </template>
 
 <style>
