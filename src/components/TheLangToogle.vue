@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 
 const isOpen = ref(false);
 
 const { locale } = useI18n();
 const langs = [
-  { icon: "", code: "pt", label: "Português" },
-  { icon: "", code: "en", label: "English" },
-  { icon: "", code: "de", label: "Deutsch" },
-  { icon: "", code: "ga", label: "Galego" },
+  { icon: "/brasil.png", code: "pt", label: "Português" },
+  { icon: "/eua.png", code: "en", label: "English" },
+  { icon: "/alemanha.png", code: "de", label: "Deutsch" },
+  { icon: "/irlanda.png", code: "ga", label: "Galego" },
 ];
 
 const switchLang = (newLang: string) => {
@@ -18,10 +18,10 @@ const switchLang = (newLang: string) => {
   localStorage.setItem("default-lang", newLang);
 };
 
-// onMounted(() => {
-//   const defaultLocale = localStorage.getItem("default-lang");
-//   locale.value = defaultLocale;
-// });
+onMounted(() => {
+  const defaultLocale = localStorage.getItem("default-lang");
+  locale.value = defaultLocale;
+});
 </script>
 
 <template>
@@ -49,7 +49,7 @@ const switchLang = (newLang: string) => {
             }"
             class="flex items-center gap-3 px-4 py-2 rounded-lg font-semibold text-gray-800 dark:text-gray-100 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white transition-all duration-200 shadow-sm"
           >
-            <i v-if="lang.icon" class="bi text-lg" :class="route.icon"></i>
+            <img v-if="lang.icon" class="w-6 h-6" :src="lang.icon" />
             <span class="tracking-wide text-base font-medium">{{
               lang.label
             }}</span>

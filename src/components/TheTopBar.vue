@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+import type { NavKey } from "../types";
 import TheThemeToggle from "./TheThemeToggle.vue";
 import TheNav from "./TheNav.vue";
 import TheLangToogle from "./TheLangToogle.vue";
