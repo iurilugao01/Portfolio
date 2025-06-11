@@ -10,32 +10,33 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <div>
+  <div class="relative inline-block z-[9999]">
     <i
-      class="bi bi-search rounded-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 p-1.5 border-2 hover:bg-black hover:text-white border-black dark:border-gray-50 dark:text-gray-50 dark:hover:bg-gray-50 dark:hover:text-black dark:hover:border-black"
+      class="bi bi-search cursor-pointer text-xl p-2 rounded-full border dark:text-white border-gray-300 dark:border-gray-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow hover:scale-110"
       @click="isOpen = !isOpen"
+      title="Pesquisar navegação"
     ></i>
+
     <transition name="fade-slide">
       <div
         v-show="isOpen"
-        class="mt-3 absolute z-50 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 min-w-[200px] animate-pop"
+        class="absolute top-full left-0 mt-2 z-[9999] w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl overflow-hidden animate-pop backdrop-blur-sm"
       >
-        <nav v-if="navs" class="flex flex-col gap-2 p-4">
+        <nav v-if="navs?.length" class="flex flex-col p-3">
           <RouterLink
             v-for="(route, index) in navs"
             :key="index"
             :to="route.url"
             @click="isOpen = false"
-            :class="{
-              'bg-gradient-to-r from-indigo-500 to-purple-500 text-white':
-                route.active,
-            }"
-            class="flex items-center gap-3 px-4 py-2 rounded-lg font-semibold text-gray-800 dark:text-gray-100 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white transition-all duration-200 shadow-sm"
+            :class="[
+              'flex items-center gap-3 px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200',
+              route.active
+                ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'
+                : 'text-gray-800 dark:text-gray-100 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white',
+            ]"
           >
             <i v-if="route.icon" class="bi text-lg" :class="route.icon"></i>
-            <span class="tracking-wide text-base font-medium">{{
-              route.label
-            }}</span>
+            <span class="tracking-wide">{{ route.label }}</span>
           </RouterLink>
         </nav>
       </div>
@@ -46,8 +47,7 @@ const isOpen = ref(false);
 <style scoped>
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .fade-slide-enter-from,
 .fade-slide-leave-to {
@@ -60,7 +60,7 @@ const isOpen = ref(false);
   transform: translateY(0) scale(1);
 }
 .animate-pop {
-  animation: pop-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pop-in 0.25s ease-out;
 }
 @keyframes pop-in {
   0% {
