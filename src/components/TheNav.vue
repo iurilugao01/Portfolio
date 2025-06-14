@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { NavKey } from "../types/interface.ts";
+import type { NavKey } from "../types/interfaces";
 
-const props = defineProps<{
+defineProps<{
   navs: NavKey[];
 }>();
 

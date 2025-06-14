@@ -47,7 +47,7 @@ onMounted(() => {
             "
             :class="[
               'flex items-center gap-3 px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200 ',
-              locale.value === lang.code
+              locale === lang.code
                 ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'
                 : 'text-gray-800 dark:text-gray-100 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white',
             ]"
