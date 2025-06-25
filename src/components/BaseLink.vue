@@ -17,10 +17,10 @@ const colorClass = computed(() => {
     case "red":
       return "bg-red-500 hover:bg-red-600";
     case "black":
-      return "bg-black hover:bg-gray-9  00";
+      return "bg-black hover:bg-gray-900";
     case "indigo":
     default:
-      return "bg-indigo-600 hover:bg-indigo-700";
+      return "bg-indigo-700 hover:bg-indigo-600";
   }
 });
 </script>
@@ -29,7 +29,7 @@ const colorClass = computed(() => {
   <a :href="to" class="block w-full" target="_blank" rel="noopener noreferrer">
     <button
       :class="[
-        'w-full py-3 px-6 rounded-xl shadow-md text-white font-semibold text-lg transition duration-300 hover:brightness-110',
+        'w-full py-3 px-6 rounded-xl shadow-md text-white font-semibold text-lg transition duration-300 hover:brightness-110 hover:scale-110',
         colorClass,
       ]"
     >
