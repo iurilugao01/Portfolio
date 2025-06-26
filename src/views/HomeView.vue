@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import BaseLayout from "../components/BaseLayout.vue";
+import TheFooter from "../components/TheFooter.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { onMounted } from "vue";
 
 const showMoreProjects = ref(false);
+const contacts = [
+  {
+    label: "Iurilugao01",
+    link: "#",
+  },
+];
 const projects = [
   {
     title: "Site de vendas",
@@ -36,7 +42,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-sky-100 via-white to-sky-200 dark:from-gray-900 dark:via-gray-950 dark:to-black flex items-center justify-center px-4"
+    class="min-h-screen bg-gradient-to-br from-sky-100 via-white to-sky-200 dark:from-gray-900 dark:via-gray-950 dark:to-black flex items-center justify-center px-4 flex-col"
   >
     <div
       class="w-full max-w-4xl p-10 rounded-3xl shadow-2xl bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm transition-all duration-500"
@@ -46,8 +52,8 @@ onMounted(() => {
         data-aos="fade-up"
       >
         <img
-          src="/brasil.png"
-          class="w-24 h-24 mb-6 drop-shadow-lg"
+          src="/me.png"
+          class="w-44 h-44 mb-6 drop-shadow-lg rounded-full border-4 border-sky-500 dark:border-sky-300 transition-all duration-300"
           data-aos="zoom-in"
         />
         <h1
@@ -115,6 +121,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
+  <TheFooter class="" />
 </template>
 
 <style scoped>

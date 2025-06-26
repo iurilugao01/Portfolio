@@ -17,7 +17,10 @@ import BaseLink from "../components/BaseLink.vue";
         </h1>
 
         <div class="flex flex-col gap-4 w-full max-w-sm animate-slide-up">
-          <BaseLink to="#" color="indigo">
+          <BaseLink
+            to="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BQyT4JjXASS2oF76CPpxpqg%3D%3D"
+            color="indigo"
+          >
             <i class="bi bi-linkedin"></i>
             Linkedin
           </BaseLink>

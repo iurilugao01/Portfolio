@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
   <header
-    class="w-full bg-white dark:bg-[#0d0d0d] shadow-lg z-50 transition-colors duration-300 relative"
+    class="w-full bg-gray-100 dark:bg-[#0d0d0d] shadow-lg z-50 transition-colors duration-300 relative"
   >
     <div
       class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center animate-fade-in-down"

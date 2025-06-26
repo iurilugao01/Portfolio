@@ -29,7 +29,7 @@ const colorClass = computed(() => {
   <a :href="to" class="block w-full" target="_blank" rel="noopener noreferrer">
     <button
       :class="[
-        'w-full py-3 px-6 rounded-xl shadow-md text-white font-semibold text-lg transition duration-300 hover:brightness-110',
+        'w-full py-3 px-6 hover:scale-110 rounded-xl shadow-md text-white font-semibold text-lg transition duration-300 hover:brightness-110',
         colorClass,
       ]"
     >
