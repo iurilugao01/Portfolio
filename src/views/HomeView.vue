@@ -15,19 +15,9 @@ const contacts = [
 ];
 const projects = [
   {
-    title: "Site de vendas",
+    title: "Blog dinamico",
     content1:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Aplicativo de receitas",
-    content1:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    title: "Sistema de gestão",
-    content1:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Foi um projeto frila para um amigo de um amigo meu que queria um Blog personalizavel, seu diferencial de outros blogs e que ele possui uma plataforma de gerenciamento onde basicamente tudo nele é customizavel desde midias, artigos ou até mesmo toda sua pagina introdutoria",
   },
 ];
 
@@ -42,7 +32,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-sky-100 via-white to-sky-200 dark:from-gray-900 dark:via-gray-950 dark:to-black flex items-center justify-center px-4 flex-col"
+    class="min-h-screen bg-[url('/background.jpeg')] dark:bg-[url('/darkBackground.jpeg')] bg-center flex items-center justify-center px-4 flex-col"
   >
     <div
       class="w-full max-w-4xl p-10 rounded-3xl shadow-2xl bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm transition-all duration-500"
@@ -60,14 +50,14 @@ onMounted(() => {
           class="text-5xl font-black text-gray-800 dark:text-white mb-4 text-center tracking-tight"
           data-aos="fade-up"
         >
-          Bem-vindo ao meu portfólio!
+          Desenvolvedor Full Stack
         </h1>
         <p
           class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-xl"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Explore meus projetos e habilidades abaixo.
+          Explore meus projetos e habilidades.
         </p>
       </div>
 
@@ -121,7 +111,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <TheFooter class="" />
+  <TheFooter :contactInfo="contacts" class="" />
 </template>
 
 <style scoped>
