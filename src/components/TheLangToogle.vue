@@ -35,7 +35,7 @@ onMounted(() => {
     <transition name="fade-slide">
       <div
         v-show="isOpen"
-        class="absolute top-full right-2.5 mt-2 w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-50 overflow-hidden animate-pop backdrop-blur-sm"
+        class="absolute top-full right-2.5 mt-2 w-60 bg-white dark:bg-[#1a1a1a] rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-500 overflow-hidden animate-pop backdrop-blur-sm"
       >
         <div class="flex flex-col p-3">
           <div

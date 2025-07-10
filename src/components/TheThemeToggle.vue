@@ -25,10 +25,7 @@ onMounted(() => {
 <template>
   <div class="w-12 h-12 flex items-center justify-center" @click="toggleTheme">
     <i
-      :class="[
-        'transition-transform duration-700 ease-in-out w-8 h-8 text-2xl text-black dark:text-white hover:scale-120',
-        darkTheme ? 'bi-cloud-sun-fill' : 'bi-brightness-high-fill',
-      ]"
+      class="transition-transform duration-700 ease-in-out w-8 h-8 text-2xl text-black dark:text-white hover:scale-120 dark:bi-cloud-sun-fill bi-brightness-high-fill"
     >
     </i>
   </div>
