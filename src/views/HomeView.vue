@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="min-h-screen bg-[url('/background.jpeg')] dark:bg-[url('/darkBackground.jpeg')] bg-center flex items-center justify-center px-4 flex-col"
+    class="min-h-screen bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-950 dark:via-gray-900 dark:to-black flex items-center justify-center px-4"
   >
     <div
       class="w-full max-w-4xl p-10 rounded-3xl shadow-2xl bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm transition-all duration-500"
@@ -61,20 +61,20 @@ onMounted(() => {
         </p>
       </div>
 
-      <span
+      <!-- <span
         class="block text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-10"
         data-aos="fade-up"
         data-aos-delay="200"
       >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
         asperiores et sint cum ex delectus doloremque repellat obcaecati...
-      </span>
+      </span> -->
 
       <div class="space-y-10">
         <div data-aos="fade-up" data-aos-delay="300">
           <BaseLayout
             title="Sobre mim"
-            content1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            content1="."
             content2="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           />
         </div>

@@ -35,7 +35,7 @@ const props = defineProps<{
     </div>
 
     <div
-      class="h-1 w-full sticky bg-gradient-to-r from-indigo-400 via-pink-400 to-red-400 dark:from-indigo-600 dark:via-pink-500 dark:to-red-500 animate-gradient-x"
+      class="h-1 w-full bg-gradient-to-r from-indigo-400 via-pink-400 to-red-400 dark:from-indigo-600 dark:via-pink-500 dark:to-red-500 animate-gradient-x"
     ></div>
   </header>
 </template>
